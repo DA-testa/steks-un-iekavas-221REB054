@@ -28,11 +28,18 @@ def find_mismatch(text):
     return "Success"
 
 def main():
-    test = input()
-    if ("I" in test):
+    test = input("F or I : ")
+    if "I" in test:
         text = input()
         mismatch = find_mismatch(text)
         # Printing answer, write your code here
+        print(mismatch)
+
+    if "F" in test:
+        fl = input("File:")
+        with open(fl, "r") as file:
+            text = file.read()
+        mismatch = find_mismatch(text)
         print(mismatch)
 
 if __name__ == "__main__":
